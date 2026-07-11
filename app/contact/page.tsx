@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <span className="block font-semibold text-court-950">
                     Coaching locations
                   </span>
-                  San Jose, Palo Alto, Mountain View, Sunnyvale
+                  San Jose, Palo Alto, Mountain View, Sunnyvale, Cupertino
                 </li>
               </ul>
             </div>
