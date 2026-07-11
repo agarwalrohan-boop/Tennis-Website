@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #FBFBF8;
+  color: #101418;
+}
+
+::selection {
+  background-color: #C9D94A;
+  color: #0B1F33;
+}
+
+/* Fade-in-on-scroll utility: toggled by the FadeIn component's IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #C9D94A;
+  outline-offset: 3px;
+}
+
+.court-lines-bg {
+  background-image:
+    linear-gradient(rgba(251, 251, 248, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 251, 248, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
