@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.racademytennis.com";
+  const base = "https://www.racdemy.com";
   const routes = ["", "/services", "/about", "/contact"];
 
   return routes.map((route) => ({

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.racademytennis.com/sitemap.xml",
+    sitemap: "https://www.racdemy.com/sitemap.xml",
   };
 }

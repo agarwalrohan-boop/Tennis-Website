@@ -50,8 +50,8 @@ export default function Footer() {
             Contact
           </h3>
           <ul className="mt-4 space-y-2 font-body text-sm text-chalk/75">
-            <li>(408) 555-0142</li>
-            <li>hello@racademytennis.com</li>
+            <li>(669) 204-8666</li>
+            <li>agarwalrohan@gmail.com</li>
             <li>San Jose, CA</li>
           </ul>
         </div>

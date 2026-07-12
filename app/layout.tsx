@@ -27,7 +27,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.racademytennis.com"),
+  metadataBase: new URL("https://www.racdemy.com"),
   title: {
     default: "R Academy | Tennis Coach San Jose & Bay Area",
     template: "%s | R Academy Tennis",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "R Academy | Tennis Coach San Jose & Bay Area",
     description:
       "Private and group tennis coaching across San Jose, Palo Alto, Mountain View, and Sunnyvale. All ages, beginner to advanced.",
-    url: "https://www.racademytennis.com",
+    url: "https://www.racdemy.com",
     siteName: "R Academy",
     locale: "en_US",
     type: "website",
