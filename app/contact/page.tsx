@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import FadeIn from "@/components/FadeIn";
 import ContactForm from "@/components/ContactForm";
+
+// TODO: replace with your real Calendly scheduling link once you create an
+// account (Calendly → Event Types → copy the link, e.g.
+// "https://calendly.com/your-handle/lesson").
+const CALENDLY_URL = "https://calendly.com/your-r-academy-handle/lesson";
 
 export const metadata: Metadata = {
   title: "Contact R Academy | Book Tennis Lessons in the Bay Area",
@@ -75,28 +81,15 @@ export default function ContactPage() {
                 Prefer to pick a slot yourself? Use the scheduler below.
               </p>
 
-              {/*
-                Calendly embed placeholder.
-                Replace the div below with Calendly's inline embed once you
-                have an account, e.g.:
-
-                <div
-                  className="calendly-inline-widget"
-                  data-url="https://calendly.com/your-r-academy-handle/lesson"
-                  style={{ minWidth: "320px", height: "700px" }}
-                />
-                and load the Calendly widget script in app/layout.tsx or
-                via next/script on this page.
-              */}
-              <div className="mt-4 flex h-[420px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-court-950/15 bg-court-50 text-center">
-                <p className="font-body text-sm font-semibold uppercase tracking-wide text-court-950/50">
-                  Calendly Scheduler
-                </p>
-                <p className="mt-2 max-w-xs font-body text-sm text-court-950/60">
-                  Embed placeholder — connect your Calendly link here to let
-                  players book lessons directly.
-                </p>
-              </div>
+              <div
+                className="calendly-inline-widget mt-4 overflow-hidden rounded-2xl"
+                data-url={CALENDLY_URL}
+                style={{ minWidth: "320px", height: "700px" }}
+              />
+              <Script
+                src="https://assets.calendly.com/assets/external/widget.js"
+                strategy="lazyOnload"
+              />
             </div>
           </FadeIn>
         </div>
