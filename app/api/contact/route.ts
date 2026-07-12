@@ -4,7 +4,7 @@ import { Resend } from "resend";
 // "from" must be an address on a domain verified in Resend (racdemy.com).
 // See README.md for the DNS verification steps.
 const FROM_ADDRESS = "R Academy <noreply@racdemy.com>";
-const TO_ADDRESS = "agarwalrohan@gmail.com";
+const TO_ADDRESS = "rohanagarwalacademy@gmail.com";
 
 export async function POST(request: NextRequest) {
   try {

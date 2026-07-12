@@ -62,7 +62,12 @@ export default function ContactPage() {
                   <span className="block font-semibold text-court-950">
                     Email
                   </span>
-                  agarwalrohan@gmail.com
+                  <a
+                    href="mailto:rohanagarwalacademy@gmail.com"
+                    className="transition-colors hover:text-court-700"
+                  >
+                    rohanagarwalacademy@gmail.com
+                  </a>
                 </li>
                 <li>
                   <span className="block font-semibold text-court-950">

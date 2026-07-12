@@ -51,7 +51,14 @@ export default function Footer() {
           </h3>
           <ul className="mt-4 space-y-2 font-body text-sm text-chalk/75">
             <li>(669) 204-8666</li>
-            <li>agarwalrohan@gmail.com</li>
+            <li>
+              <a
+                href="mailto:rohanagarwalacademy@gmail.com"
+                className="transition-colors hover:text-ace"
+              >
+                rohanagarwalacademy@gmail.com
+              </a>
+            </li>
             <li>San Jose, CA</li>
           </ul>
         </div>
