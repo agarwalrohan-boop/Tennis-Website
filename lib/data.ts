@@ -75,33 +75,33 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "My son went from barely finishing a rally to competing in USTA 12-and-under events in about eight months. Coaching is patient but genuinely demanding.",
-    name: "Priya M.",
-    role: "Parent, Palo Alto",
+      "As a former top-level high school tennis player (4.0), I can say that Rohan has the technique, expertise, and skill to teach the critical basics and mental game and strategies of tennis — forehand, backhand, footwork, serve, pronation, overheads, serve and volley, slices, dropshots, lobs, situational awareness, etc! Thank you!",
+    name: "Aadit Rai",
+    role: "Google review",
   },
   {
     quote:
-      "I'm 41 and picked up tennis for the first time last year. The private lessons were the fastest I've ever improved at a sport — clear feedback every single session.",
-    name: "David C.",
-    role: "Adult beginner, San Jose",
+      "Coach Rohan is awesome! He is very patient when teaching and very flexible with schedules. He is easy-going, so lessons are fun and engaging. My son loves it! I highly recommend!",
+    name: "Ana Bastos",
+    role: "Google review",
   },
   {
     quote:
-      "The group clinic is the highlight of my week. It's serious enough to actually improve my game but still fun and social with people I look forward to seeing.",
-    name: "Renee T.",
-    role: "Adult clinic, Mountain View",
+      "Rohan has been teaching my son tennis and has really helped my son's game. Rohan gives good attention and helps correct mistakes early and is very patient. Would highly recommend Rohan for anyone looking to pick up tennis for the first time.",
+    name: "Ashwinram Suresh",
+    role: "Google review",
   },
   {
     quote:
-      "Our daughter's forehand and footwork completely changed in a semester. What stands out most is how much emphasis is put on discipline and match manners, not just strokes.",
-    name: "Alan & Grace K.",
-    role: "Parents, Sunnyvale",
+      "We've had a great experience with our tennis coach Rohan working with my kids. He is patient, encouraging, and does a great job making lessons both fun and focused on fundamentals.",
+    name: "Victor Nee",
+    role: "Google review",
   },
   {
     quote:
-      "I've worked with three coaches in the Bay Area and this is the first one who actually built a plan around my weaknesses instead of running generic drills.",
-    name: "Marcus O.",
-    role: "Adult 4.0 player, San Jose",
+      "Rohan is a great coach with a passion to help everyone achieve their best. He works really hard and is a great competitive player. Would highly recommend Bay Area Tennis!",
+    name: "Vikas Sharma",
+    role: "Google review",
   },
 ];
 
