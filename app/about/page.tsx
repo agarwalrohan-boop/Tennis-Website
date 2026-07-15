@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import CTASection from "@/components/CTASection";
 
@@ -69,7 +70,43 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn delay={120}>
-            <div className="rounded-2xl bg-court-50 p-8">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <Image
+                src="/images/coaching-1.jpg"
+                alt="Coach and player working through drills on court"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="bg-court-50 py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              { src: "/images/coaching-4.jpg", alt: "Adult player striking a forehand" },
+              { src: "/images/coaching-3.jpg", alt: "Junior player about to serve" },
+              { src: "/images/coaching-2.jpg", alt: "Group of players after a session" },
+            ].map((photo, i) => (
+              <FadeIn key={photo.src} delay={i * 90}>
+                <div className="relative aspect-square overflow-hidden rounded-2xl">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={270} className="mt-14">
+            <div className="mx-auto max-w-3xl rounded-2xl bg-white p-8 text-center shadow-sm shadow-court-950/5">
               <h3 className="font-display text-2xl text-court-950">
                 Coaching philosophy
               </h3>
@@ -89,7 +126,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-court-50 py-20">
+      <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
           <FadeIn className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-4xl tracking-tight text-court-950 sm:text-5xl">
@@ -100,7 +137,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {values.map((v, i) => (
               <FadeIn key={v.title} delay={i * 100}>
-                <div className="h-full rounded-2xl bg-white p-8 shadow-sm shadow-court-950/5">
+                <div className="h-full rounded-2xl border border-court-950/10 bg-court-50 p-8">
                   <h3 className="font-display text-xl text-court-950">
                     {v.title}
                   </h3>

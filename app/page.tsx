@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import ServeGraphic from "@/components/ServeGraphic";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
@@ -22,13 +22,33 @@ const serviceIcons: Record<string, ReactNode> = {
   "adult-clinics": <AdultIcon />,
 };
 
+const serviceImages: Record<string, string> = {
+  "private-lessons": "/images/coaching-4.jpg",
+  "group-lessons": "/images/coaching-2.jpg",
+  "kids-academy": "/images/coaching-3.jpg",
+  "adult-clinics": "/images/coaching-1.jpg",
+};
+
 export default function HomePage() {
   return (
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-court-950">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28 lg:px-10">
-          <div className="order-2 lg:order-1">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/coaching-4.jpg"
+            alt="R Academy coach mid-forehand on a Bay Area tennis court"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_25%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-court-950 via-court-950/85 to-court-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-court-950 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6 py-28 lg:py-36 lg:px-10">
+          <div className="max-w-xl">
             <p className="font-body text-sm font-semibold uppercase tracking-widest2 text-ace">
               San Jose &middot; Palo Alto &middot; Mountain View &middot; Sunnyvale
             </p>
@@ -54,10 +74,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-
-          <div className="order-1 mx-auto w-full max-w-md lg:order-2 lg:max-w-none">
-            <ServeGraphic />
-          </div>
         </div>
       </section>
 
@@ -82,6 +98,7 @@ export default function HomePage() {
               <FadeIn key={service.slug} delay={i * 90}>
                 <ServiceCard
                   icon={serviceIcons[service.slug]}
+                  image={serviceImages[service.slug]}
                   name={service.name}
                   tagline={service.tagline}
                   description={service.description}
@@ -156,6 +173,41 @@ export default function HomePage() {
             {testimonials.slice(0, 3).map((t, i) => (
               <FadeIn key={t.name} delay={i * 90}>
                 <TestimonialCard {...t} />
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <FadeIn className="mx-auto max-w-2xl text-center">
+            <p className="font-body text-xs font-semibold uppercase tracking-widest2 text-clay">
+              On the Court
+            </p>
+            <h2 className="mt-3 font-display text-4xl tracking-tight text-court-950 sm:text-5xl">
+              Real players, real progress
+            </h2>
+          </FadeIn>
+
+          <div className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {[
+              { src: "/images/coaching-4.jpg", alt: "Adult player striking a forehand" },
+              { src: "/images/coaching-2.jpg", alt: "Group of players posing with racquets after a session" },
+              { src: "/images/coaching-3.jpg", alt: "Junior player about to serve" },
+              { src: "/images/coaching-1.jpg", alt: "Player gathering balls between drills" },
+            ].map((photo, i) => (
+              <FadeIn key={photo.src} delay={i * 90}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
               </FadeIn>
             ))}
           </div>
