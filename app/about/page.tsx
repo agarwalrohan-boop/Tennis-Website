@@ -4,9 +4,9 @@ import FadeIn from "@/components/FadeIn";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "About R Academy | Bay Area Tennis Coaching",
+  title: "About R Academy | Meet Coach Rohan Agarwal",
   description:
-    "Meet R Academy: professional tennis coaching in the Bay Area for all ages and levels, focused on building sound technique and real on-court confidence.",
+    "Meet Rohan Agarwal, a Top 50 Northern California-ranked competitive tennis player turned coach, offering private and group lessons for all ages and levels in the Bay Area.",
 };
 
 const values = [
@@ -42,29 +42,57 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:px-10">
           <FadeIn>
             <h2 className="font-display text-3xl tracking-tight text-court-950 sm:text-4xl">
-              Our story
+              Meet Coach Rohan Agarwal
             </h2>
             <div className="mt-6 space-y-5 font-body text-[15px] leading-relaxed text-court-950/75">
               <p>
-                R Academy started with a simple frustration: too many players
-                in the Bay Area were stuck between overcrowded group clinics
-                that never touched their specific weaknesses, and private
-                coaching that felt more like a status symbol than actual
-                instruction.
+                Rohan Agarwal grew up playing competitive tennis and earned a
+                Top 50 ranking in Northern California, building a strong
+                foundation through years of tournament experience.
               </p>
               <p>
-                R Academy was founded by a coach with years on court —
-                teaching juniors their first forehand, helping adult
-                beginners fall in love with the game, and preparing
-                competitive players for tournament play. That range is what
-                shaped the philosophy here: tennis is not one skill, it's a
-                different conversation with every player.
+                For the past 2–3 years, Rohan has been coaching players of
+                all ages and skill levels, helping them improve their
+                technique, confidence, and love for the game. His coaching
+                philosophy focuses on building strong fundamentals while
+                creating a positive, motivating environment where every
+                player can reach their full potential.
               </p>
               <p>
-                Today, R Academy runs private lessons, small group sessions,
-                a full kids academy, and adult clinics across San Jose, Palo
-                Alto, Mountain View, and Sunnyvale — always kept small enough
-                that every player actually gets seen.
+                Alongside coaching, Rohan is returning to competitive tennis,
+                bringing fresh tournament experience and a high-performance
+                mindset to his students.
+              </p>
+              <p>
+                Rohan is now launching his own tennis academy and is excited
+                to welcome children and adults of all skill levels. The
+                academy offers both private lessons and group training,
+                tailored to beginners, intermediate players, and competitive
+                athletes looking to elevate their game.
+              </p>
+              <p>
+                Whether you're picking up a racket for the first time or
+                striving to compete at the next level, Rohan is dedicated to
+                helping every student achieve their goals and enjoy the
+                journey.
+              </p>
+            </div>
+
+            <div className="mt-8 rounded-2xl border-l-4 border-ace bg-court-50 p-6">
+              <p className="font-body text-sm font-semibold uppercase tracking-wide text-court-950">
+                Now hiring coaches
+              </p>
+              <p className="mt-2 font-body text-sm leading-relaxed text-court-950/75">
+                The academy is expanding and looking for passionate tennis
+                coaches committed to developing players in a supportive,
+                energetic environment.{" "}
+                <a
+                  href="/contact"
+                  className="font-semibold text-clay underline-offset-2 hover:underline"
+                >
+                  Get in touch
+                </a>
+                .
               </p>
             </div>
           </FadeIn>
