@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import FadeIn from "@/components/FadeIn";
-import ContactForm from "@/components/ContactForm";
 
 // TODO: replace with your real Calendly scheduling link once you create an
 // account (Calendly → Event Types → copy the link, e.g.
@@ -26,27 +25,14 @@ export default function ContactPage() {
             Let's get you on court
           </h1>
           <p className="mt-5 font-body text-lg text-chalk/70">
-            Send a message with your goals and availability, or grab a time
-            directly on the calendar below.
+            Reach out directly, or grab a time on the calendar below.
           </p>
         </div>
       </section>
 
       <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr,1.1fr] lg:px-10">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[0.8fr,1.2fr] lg:px-10">
           <FadeIn>
-            <h2 className="font-display text-2xl text-court-950">
-              Send a message
-            </h2>
-            <p className="mt-2 font-body text-sm text-court-950/60">
-              We typically reply within one business day.
-            </p>
-            <div className="mt-6">
-              <ContactForm />
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={100}>
             <div className="rounded-2xl bg-court-50 p-8">
               <h2 className="font-display text-2xl text-court-950">
                 Reach us directly
@@ -77,25 +63,25 @@ export default function ContactPage() {
                 </li>
               </ul>
             </div>
+          </FadeIn>
 
-            <div className="mt-8">
-              <h2 className="font-display text-2xl text-court-950">
-                Book a time instantly
-              </h2>
-              <p className="mt-2 font-body text-sm text-court-950/60">
-                Prefer to pick a slot yourself? Use the scheduler below.
-              </p>
+          <FadeIn delay={100}>
+            <h2 className="font-display text-2xl text-court-950">
+              Book a time instantly
+            </h2>
+            <p className="mt-2 font-body text-sm text-court-950/60">
+              Prefer to pick a slot yourself? Use the scheduler below.
+            </p>
 
-              <div
-                className="calendly-inline-widget mt-4 overflow-hidden rounded-2xl"
-                data-url={CALENDLY_URL}
-                style={{ minWidth: "320px", height: "700px" }}
-              />
-              <Script
-                src="https://assets.calendly.com/assets/external/widget.js"
-                strategy="lazyOnload"
-              />
-            </div>
+            <div
+              className="calendly-inline-widget mt-4 overflow-hidden rounded-2xl"
+              data-url={CALENDLY_URL}
+              style={{ minWidth: "320px", height: "700px" }}
+            />
+            <Script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              strategy="lazyOnload"
+            />
           </FadeIn>
         </div>
       </section>
