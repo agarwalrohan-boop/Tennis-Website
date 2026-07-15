@@ -24,8 +24,10 @@ const serviceIcons: Record<string, ReactNode> = {
 
 const serviceImages: Record<string, string> = {
   "private-lessons": "/images/coaching-4.jpg",
-  "group-lessons": "/images/coaching-2.jpg",
-  "kids-academy": "/images/coaching-3.jpg",
+  "group-lessons":
+    "https://images.unsplash.com/flagged/photo-1576972405668-2d020a01cbfa?auto=format&fit=crop&w=1200&q=80",
+  "kids-academy":
+    "https://images.unsplash.com/photo-1643236943728-2745b38cbcf7?auto=format&fit=crop&w=1200&q=80",
   "adult-clinics": "/images/coaching-1.jpg",
 };
 
@@ -194,8 +196,14 @@ export default function HomePage() {
           <div className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
             {[
               { src: "/images/coaching-4.jpg", alt: "Adult player striking a forehand" },
-              { src: "/images/coaching-2.jpg", alt: "Group of players posing with racquets after a session" },
-              { src: "/images/coaching-3.jpg", alt: "Junior player about to serve" },
+              {
+                src: "https://images.unsplash.com/flagged/photo-1576972405668-2d020a01cbfa?auto=format&fit=crop&w=1200&q=80",
+                alt: "Group of adult players in a doubles match",
+              },
+              {
+                src: "https://images.unsplash.com/photo-1643236943728-2745b38cbcf7?auto=format&fit=crop&w=1200&q=80",
+                alt: "Junior player mid-swing",
+              },
               { src: "/images/coaching-1.jpg", alt: "Player gathering balls between drills" },
             ].map((photo, i) => (
               <FadeIn key={photo.src} delay={i * 90}>

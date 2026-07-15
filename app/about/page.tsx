@@ -116,8 +116,14 @@ export default function AboutPage() {
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               { src: "/images/coaching-4.jpg", alt: "Adult player striking a forehand" },
-              { src: "/images/coaching-3.jpg", alt: "Junior player about to serve" },
-              { src: "/images/coaching-2.jpg", alt: "Group of players after a session" },
+              {
+                src: "https://images.unsplash.com/photo-1643236943728-2745b38cbcf7?auto=format&fit=crop&w=1200&q=80",
+                alt: "Junior player mid-swing",
+              },
+              {
+                src: "https://images.unsplash.com/flagged/photo-1576972405668-2d020a01cbfa?auto=format&fit=crop&w=1200&q=80",
+                alt: "Group of adult players in a doubles match",
+              },
             ].map((photo, i) => (
               <FadeIn key={photo.src} delay={i * 90}>
                 <div className="relative aspect-square overflow-hidden rounded-2xl">
