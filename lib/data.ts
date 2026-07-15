@@ -116,3 +116,89 @@ export const locations: Location[] = [
   { city: "Mountain View", detail: "Group lessons, adult clinics" },
   { city: "Sunnyvale", detail: "Private lessons, junior groups" },
 ];
+
+export type Level = {
+  name: string;
+  description: string;
+};
+
+export const kidsLevels: Level[] = [
+  {
+    name: "Beginner 1",
+    description:
+      "First-time players. Grip, ready position, and basic footwork, plus getting comfortable rallying with a racquet and ball.",
+  },
+  {
+    name: "Beginner 2",
+    description:
+      "Consistent rallying from both sides, an introduction to serving, and the basics of keeping score.",
+  },
+  {
+    name: "Intermediate 1",
+    description:
+      "Reliable groundstrokes and footwork patterns, with players starting to play out full points and rallies.",
+  },
+  {
+    name: "Intermediate 2",
+    description:
+      "Adding spin and pace across all strokes, plus tactical basics like shot selection and court positioning.",
+  },
+  {
+    name: "Advanced",
+    description:
+      "Competitive juniors training for USTA tournament play — high-intensity drilling, match strategy, and mental toughness.",
+  },
+];
+
+export const adultLevels: Level[] = [
+  {
+    name: "Beginner 1",
+    description:
+      "New to tennis or returning after years away. Proper grips, basic strokes, and rally consistency in a relaxed, supportive setting.",
+  },
+  {
+    name: "Beginner 2",
+    description:
+      "Rally with confidence and start keeping score, with a focus on footwork and the basics of serving and returning.",
+  },
+  {
+    name: "Intermediate 1",
+    description:
+      "For players comfortable rallying who want to sharpen groundstrokes, add spin, and start playing situational points.",
+  },
+  {
+    name: "Intermediate 2",
+    description:
+      "Refine shot selection, court positioning, and doubles strategy for players in club ladders or league play.",
+  },
+  {
+    name: "Advanced",
+    description:
+      "High-intensity clinics for strong players chasing a higher NTRP rating — live-ball drills and match-play strategy.",
+  },
+];
+
+export type ScheduleClass = {
+  ageGroup: "Kids" | "Adults";
+  level: string;
+  days: string;
+  time: string;
+  location: string;
+};
+
+export const scheduleClasses: ScheduleClass[] = [
+  {
+    ageGroup: "Kids",
+    level: "Beginner 1",
+    days: "Monday, Wednesday, Friday",
+    time: "5:30 PM",
+    location: "Lincoln High School",
+  },
+  {
+    ageGroup: "Adults",
+    level: "Beginner 1",
+    days: "Monday, Wednesday, Friday",
+    time: "6:30 PM",
+    location: "Lincoln High School",
+  },
+];
